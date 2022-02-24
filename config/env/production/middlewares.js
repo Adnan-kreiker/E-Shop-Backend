@@ -1,6 +1,14 @@
 module.exports = [
   "strapi::errors",
   {
+    gzip: {
+      enabled: true,
+      options: {
+        br: false
+      }
+    }
+  },
+  {
     name: "strapi::security",
     config: {
       contentSecurityPolicy: {
